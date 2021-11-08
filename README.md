@@ -17,13 +17,8 @@
 ### Description
 This Image is based upon the Red Hat Universal Base Image (UBI) 8 and includes `Podman` and `OpenSCAP`. **Note:** Normally, OpenSCAP is only available in a Red Hat or CentOS repo. In this Image, the `RPM` packages are pulled from an Online repo and installed manually.
 
-View the [Changelog](https://github.com/pkeech/ubi-podman-oscap/blob/main/CHANGELOG.md)
-
 ### Compatibility
 The following table shows the current benchmarks:
-
-<br />
-<div align="center">
 
 | Operating System / App Name | Versions |
 | --- | :---: |
@@ -48,8 +43,6 @@ The following table shows the current benchmarks:
 | McAfee VSE | - |
 | Wind River (WRLinux) | 10.19, 8 |
 
-</div>
-
 ### Usage (Standalone)
 Use the following steps to build and run this Docker Image. Additionally, this image can be used within a CI/CD Pipeline.
 
@@ -57,6 +50,8 @@ Use the following steps to build and run this Docker Image. Additionally, this i
 2. Create a Temporary Docker Volume `docker volume create podman-temp`
 3. Run the Docker Image `docker run -it --rm --privileged -v podman-temp:/var/lib/containers << IMAGE-NAME >>`
 
+### Changes & Updates
+View the [Changelog](https://github.com/pkeech/ubi-podman-oscap/blob/main/CHANGELOG.md)
 
 ### Notes
 Listed below are notes about this image:
