@@ -22,6 +22,9 @@ View the [Changelog](https://github.com/pkeech/ubi-podman-oscap/blob/main/CHANGE
 ### Compatibility
 The following table shows the current benchmarks:
 
+<br />
+<div align="center">
+
 | Operating System / App Name | Versions |
 | --- | :---: |
 | CentOS | 7, 8 |
@@ -44,6 +47,8 @@ The following table shows the current benchmarks:
 | Ubuntu | 16.04, 18.04, 20.04 |
 | McAfee VSE | - |
 | Wind River (WRLinux) | 10.19, 8 |
+
+</div>
 
 ### Usage (Standalone)
 Use the following steps to build and run this Docker Image. Additionally, this image can be used within a CI/CD Pipeline.
