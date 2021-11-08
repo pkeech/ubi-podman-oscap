@@ -17,7 +17,7 @@
 ### Description
 This Image is based upon the Red Hat Universal Base Image (UBI) 8 and includes `Podman` and `OpenSCAP`. **Note:** Normally, OpenSCAP is only available in a Red Hat or CentOS repo. In this Image, the `RPM` packages are pulled from an Online repo and installed manually.
 
-View the [Changelog](https://github.com/pkeech/ubi-podman-oscap/blob/main/CHANGELOG)
+View the [Changelog](https://github.com/pkeech/ubi-podman-oscap/blob/main/CHANGELOG.md)
 
 ### Usage
 Use the following steps to build and run this Docker Image. Additionally, this image can be used within a CI/CD Pipeline.
