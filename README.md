@@ -1,6 +1,3 @@
-# ubi-podman-oscap
-UBI8 Image w/ Podman and OpenSCAP Installed
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
