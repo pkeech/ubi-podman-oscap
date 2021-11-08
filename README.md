@@ -26,6 +26,7 @@ Use the following steps to build and run this Docker Image. Additionally, this i
 3. Run the Docker Image `docker run -it --rm --privileged -v podman-temp:/var/lib/containers << IMAGE-NAME >>`
 
 ### Notes
+Listed below are notes about this image:
 
 * Currently, this image requires the `--privileged` tag. Another image will be created to remove this requirement.
 * You will need to include the required benchmarks to perform a scan.
