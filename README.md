@@ -51,7 +51,8 @@ Use the following steps to build and run this Docker Image.
 1. Build the Docker image and tag `docker build src -t << IMAGE-NAME >>`
 2. Create a Temporary Docker Volume `docker volume create podman-temp`
 3. Run the Docker Image `docker run -it --rm --privileged -v podman-temp:/var/lib/containers << IMAGE-NAME >>`
-4. 
+4. Pull the Image you wish to scan. e.g. `podman pull ubuntu:20.04`
+5. Scan the Image. e.g. `oscap-podman ubuntu:20.04 xccdf eval --verbose ERROR --fetch-remote-resources --profile xccdf_org.ssgproject.content_profile_stig scap-content/scap-security-guide-0.1.58/ssg-ubuntu2004-ds.xml`
 
 ### Usage (Gitlab)
 Use the following steps as a guide to create a Gitlab CI stage.
