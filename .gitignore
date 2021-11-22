@@ -1,2 +1,2 @@
-## EXCLUDE VSCODE DIRECTORY
-.vscode
+## EXCLUDE VSCODE SETTINGS
+*.code-workspace
