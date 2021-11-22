@@ -17,7 +17,7 @@
 ### Description
 This Image is based upon the Red Hat Universal Base Image (UBI) 8 and includes `Podman` and `OpenSCAP`. 
 
-**Note:** Normally, OpenSCAP is only available in a Red Hat or CentOS repo. In this Image, the `RPM` packages are pulled from an Online repo and installed manually.
+> **Note:** Normally, OpenSCAP is only available in a Red Hat or CentOS repo. In this Image, the `RPM` packages are pulled from an Online repo and installed manually.
 
 ### Compatibility
 The following table shows the current benchmarks:
@@ -48,7 +48,7 @@ The following table shows the current benchmarks:
 ### Usage (Standalone)
 Use the following steps to build and run this Docker Image.
 
-**Note:** > This image **DOES NOT** include benchmarks. To obtain benchmarks, please review the section below.
+> **Note:** This image **DOES NOT** include benchmarks. To obtain benchmarks, please review the section below.
 
 1. Build the Docker image and tag `docker build src -t << IMAGE-NAME >>`
 2. Create a Temporary Docker Volume `docker volume create podman-temp`
