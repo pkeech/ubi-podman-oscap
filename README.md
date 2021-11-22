@@ -48,6 +48,8 @@ The following table shows the current benchmarks:
 ### Usage (Standalone)
 Use the following steps to build and run this Docker Image.
 
+**Note:** > This image **DOES NOT** include benchmarks. To obtain benchmarks, please review the section below.
+
 1. Build the Docker image and tag `docker build src -t << IMAGE-NAME >>`
 2. Create a Temporary Docker Volume `docker volume create podman-temp`
 3. Run the Docker Image `docker run -it --rm --privileged -v podman-temp:/var/lib/containers << IMAGE-NAME >>`
