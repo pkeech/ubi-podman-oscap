@@ -61,6 +61,46 @@ Use the following steps as a guide to create a Gitlab CI stage.
 
 1. *Placeholder*
 
+### Obtaining Benchmarks
+This image doesn't contain any benchmarks. A great resource for benchmarks if provided by the great folks that contribute [ComplianceAsCode](https://github.com/ComplianceAsCode/content)
+
+To quickly add benchmarks to the image, run the following commands:
+
+1. Start the OpenSCAP container
+
+``` bash
+docker run -it --rm --privileged -v podman-temp:/var/lib/containers << IMAGE-NAME >>
+```
+
+2. Download the Benchmarks and extract
+
+``` bash
+## DOWNLOAD BENCHMARKS
+curl -L https://github.com/ComplianceAsCode/content/releases/download/v0.1.58/scap-security-guide-0.1.58.zip -o scap-security-guide.zip
+
+## EXTRACT BENCHMARKS
+unzip -qq -o "scap-security-guide.zip" -d "scap-content"
+
+## CLEANUP
+rm -rf /OpenSCAP/scap-security-guide.zip
+```
+
+3. View Profiles of Benchmark. Change the `xml` file to match the Benchmark you wish to use.
+
+``` bash
+oscap info --profiles scap-content/scap-security-guide-0.1.58/ssg-ubuntu2004-ds.xml
+```
+
+4. Verify
+
+``` bash
+## PULL TEST IMAGE (UBUNTU 20.04)
+podman pull ubuntu:20.04
+
+## SCAN TEST IMAGE
+oscap-podman ubuntu:20.04 xccdf eval --verbose ERROR --fetch-remote-resources --profile xccdf_org.ssgproject.content_profile_stig scap-content/scap-security-guide-0.1.58/ssg-ubuntu2004-ds.xml
+```
+
 ### Changes & Updates
 View the [Changelog](https://github.com/pkeech/ubi-podman-oscap/blob/main/CHANGELOG.md)
 
